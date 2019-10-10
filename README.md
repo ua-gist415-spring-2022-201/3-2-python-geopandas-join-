@@ -1,5 +1,5 @@
 # Lab: Python Spatial Programming with Shapely and Fiona
-## Worth: 40
+## Worth: 50
 ## Due: 7 days
 ## Assignment
 
