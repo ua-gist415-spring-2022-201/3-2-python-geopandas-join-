@@ -8,6 +8,7 @@ We previously worked with python within the framework of QGIS but python is most
 
 _This lab adapted from https://macwright.org/2012/10/31/gis-with-python-shapely-fiona.html
 and https://automating-gis-processes.github.io/CSC18/lessons/L1/Geometric-Objects.html_
+
 Shapely and Fiona are essential Python tools for geospatial programming written by Sean Gillies. Use them instead of ESRI’s Python toolchain. They are free, stable, and mean you can post your code on GitHub and nonrich people will be able to run it.
 
 Reference:
