@@ -6,8 +6,8 @@
 ## Background
 We previously worked with python within the framework of QGIS but python is most flexible when used in stand-alone mode, which allows us to decouple the QGIS framework libraries from the base libraries of python and explicitly add libraries of our own. As with other languages, the power of Python comes from the plethora of high-quality libraries that extend the base functionality of the core python programming language. In the realm of spatial python there are many libraries but we will start with two: `shapely` and `fiona`.
 
-_This lab adapted from https://macwright.org/2012/10/31/gis-with-python-shapely-fiona.html_
-
+_This lab adapted from https://macwright.org/2012/10/31/gis-with-python-shapely-fiona.html
+and https://automating-gis-processes.github.io/CSC18/lessons/L1/Geometric-Objects.html_
 Shapely and Fiona are essential Python tools for geospatial programming written by Sean Gillies. Use them instead of ESRI’s Python toolchain. They are free, stable, and mean you can post your code on GitHub and nonrich people will be able to run it.
 
 Reference:
