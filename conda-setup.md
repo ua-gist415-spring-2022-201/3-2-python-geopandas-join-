@@ -46,8 +46,8 @@ _Copy this path._
 
 Next, open Spyder, click `Tools` -> `Preferences` and under `Python Interpreter`, select the radio button next to `Use the following Pytohn interpreter:` and paste the path from the previous step. It will look something like this:
 
-![Spyder prefs](#spyder-prefs-interpreter.png)
+![Spyder prefs](spyder-prefs-interpreter.png)
 
 Finally, restart the `IPython console` to force spyder to use the python from your `python37` environment:
 
-![Restart IPython](#spyder-restart-ipython.png)
+![Restart IPython](spyder-restart-ipython.png)
