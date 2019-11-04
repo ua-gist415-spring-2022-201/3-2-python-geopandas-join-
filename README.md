@@ -1,6 +1,4 @@
-# Lab: Python Spatial Programming with Geopandas
-## Worth: 50
-## Due: 7 days
+# Python Spatial Programming with Geopandas
 ## Assignment
 
 ## Background
