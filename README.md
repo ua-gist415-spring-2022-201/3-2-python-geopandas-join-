@@ -43,7 +43,7 @@ The editor has a navigation bar that allows you to run a selection, a line, or t
 
 ![Spyder IDE](spyder-editor-navbar.png)
 
-## Part 1 - Performing spatial joins
+## Performing spatial joins
 Review [Performing spatial joins](http://www.qgistutorials.com/en/docs/3/performing_spatial_joins.html) to see our objective. 
 
 ### Download and extract the data:
