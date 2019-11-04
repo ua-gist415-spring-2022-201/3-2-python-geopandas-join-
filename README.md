@@ -1,4 +1,4 @@
-# Lab: Python Spatial Programming with Shapely and Fiona
+# Lab: Python Spatial Programming with Geopandas
 ## Worth: 50
 ## Due: 7 days
 ## Assignment
@@ -9,22 +9,17 @@ We previously worked with python within the framework of QGIS but python is most
 Reference:
 - [Shapely docs](https://shapely.readthedocs.io/en/stable/manual.html)
 - [Geopanda docs](http://geopandas.org/)
-- [Rasterio docs](https://pythonhosted.org/rasterstats/manual.html)
-- [Rasterstats docs](https://pythonhosted.org/rasterstats/manual.html)
 
 Docs can be good or bad. The docs for above range from "ok" to "good" (geopandas).
 GeoPandas actually uses the `shapely` model for geometries and while it needs to be installed, there is little direct
 interaction with this library on our part except for accessing the `shapely` geometries.
 
-The objective of this lab is to reproduce two of the QGIS Tutorials you did previously:
+The objective of this lab is to reproduce one of the QGIS Tutorials you did previously:
 - Part 1: [Performing spatial joins](http://www.qgistutorials.com/en/docs/3/performing_spatial_joins.html)
-- Part 2: [Sampling raster data](http://www.qgistutorials.com/en/docs/3/sampling_raster_data.html)
 
 ## Deliverables
 - `spatial_join.py`
 - `spatial_join.png`
-- `sample_raster.py`
-- `sample_raster.png`
 
 ## Getting started with Spyder
 Perform this work in `Spyder`. To access `Spyder` from the `Anaconda prompt`:
