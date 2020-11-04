@@ -15,6 +15,9 @@ interaction with this library on our part except for accessing the `shapely` geo
 The objective of this lab is to reproduce one of the QGIS Tutorials you did previously:
 - [Performing spatial joins](http://www.qgistutorials.com/en/docs/3/performing_spatial_joins.html)
 
+## Prerequisites
+- [Install Anaconda](https://www.anaconda.com/products/individual)
+
 ## Deliverables
 - `spatial_join.py`
 - `spatial_join.png`
