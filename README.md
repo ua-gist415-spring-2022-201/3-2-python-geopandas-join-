@@ -2,9 +2,18 @@
 ## Assignment
 
 ### Background
-We previously worked with python within the framework of QGIS but python is most flexible when used in stand-alone mode, which allows us to decouple the QGIS framework libraries from the base libraries of python and explicitly add libraries of our own. As with other languages, the power of Python comes from the plethora of high-quality libraries that extend the base functionality of the core python programming language. In the realm of spatial python there are many libraries but we will start with a couple: `geopandas`, `shapely`, `rasterio`, and `rasterstats`.
+We previously worked with python within the framework of QGIS but python is most flexible when used in stand-alone mode, which allows us to decouple the QGIS framework libraries from the base libraries of python and explicitly add libraries of our own. As with other languages, the power of Python comes from the plethora of high-quality libraries that extend the base functionality of the core python programming language. In the realm of spatial python there are many libraries but we will start with a couple: `geopandas`, `shapely`, `rasterio`, and `rasterstats`. With that said, we will be reliant on specific libraries to be installed for this assignment and to unify the workspaces across all individual student machines (Windows and Macs of various versions with different pre-existing software installed), we will be using a `docker` base image that includes the geospatial libraries we want to use as well as the IDE (Spyder) that we want to use. We'll get to what Spyder is in a bit. 
 
-Reference:
+#### Anaconda
+Python relies on libraries that extend the basic functionality. These libraries are installed and managed primarily by two different methods. `pip` may be more familiar to you if you have used python previously. `conda` is what we will use because it manages dependencies better and the conda library repos (aka `channels`) support the geospatial libraries better than `pip`'s `PyPi`.
+
+We won't get into the specifics of how to install the packages themselves though you are encouraged to create your own conda install, your own conda environment(s), and install your own libraries. However, for building an application that uses a variety of geospatial packages this is quite challenging because different libraries may depend on the same core geo or math library (which is good) but may also require a different version (which is bad and causes us to fail to install the library). To complicate matters, different versions of libraries may have different dependency versions. To make it even more complex and infurirating, different channels or repos may have libraries that have their own nuanced dependencies. Not to make it even worse, but the order of installation also makes a difference. Therefore, for this class we are going to be using a docker container that already has the right versions of libraries installed that we will need for this assignment. 
+
+#### Integrated Development Environment (IDE) - Spyder
+When developing code or working with structured files in HTML, JSON, YAML, etc., it is helpful to use a special type of text editor that does syntax highlighting as well as more advanced functions such as being able to complete typing commands or variables because they are context-aware as well as have integrations with runtimes. For this class we will be using `Spyder`, an IDE for Python that includes smart editing, integrated runtime, and a variable explorer, allowing you to visually inspect your variables as you are running through your program. Like the geospatial libraries, this is a python library with its own dependencies and I have wrapped it up in the same docker container. Since it is a Graphical User Interface (GUI), it has special requirements for building windows and interacting with your mouse and keyboard that are slightly morecomplicated running through docker so we are going to be running them inside a browser. 
+
+#### Geospatial libraries and notes on documentation 
+Geospatial Library Reference:
 - [Shapely docs](https://shapely.readthedocs.io/en/stable/manual.html)
 - [Geopanda docs](http://geopandas.org/)
 
@@ -12,15 +21,50 @@ Docs can be good or bad. The docs for above range from "ok" to "good" (geopandas
 GeoPandas actually uses the `shapely` model for geometries and while it needs to be installed, there is little direct
 interaction with this library on our part except for accessing the `shapely` geometries.
 
+## Objective
 The objective of this lab is to reproduce one of the QGIS Tutorials you did previously:
 - [Performing spatial joins](http://www.qgistutorials.com/en/docs/3/performing_spatial_joins.html)
 
 ## Prerequisites
-- [Install Anaconda](https://www.anaconda.com/products/individual)
+- Python 3 must be installed [Download](https://www.python.org/downloads/)
+- Docker must be installed
 
 ## Deliverables
 - `spatial_join.py`
 - `spatial_join.png`
+
+## Directions
+
+### Getting started with Spyder
+_On doing this without docker: Without docker I would have you install Anaconda, create an environment, install all the libraries, including spyder, and then have you launch `spyder` from the command line. However, the diversity of platform issues we encountered doing it this way previously required standardizing._
+
+Within this repository there is a file [spyder_desktop.py](spyder_desktop.py). We are going to run this file which will do a little extra work to make our docker container run nicely with our windowing environment.
+
+Navigate to the directory where this repo is checked out to and run:
+```
+python spyder_desktop.py -p
+```
+This will run the docker container which will connect to using our browser. You should shortly see something like this:
+```
+Using default tag: latest
+latest: Pulling from aaryno/spyder-geo
+Digest: sha256:0203cd9f45aef9575b75524c102c6f419007e5e905cb808c640370eec5cabd91
+Status: Image is up to date for aaryno/spyder-geo:latest
+docker.io/aaryno/spyder-geo:latest
+Starting up docker image...
+87ddf34197eb49c089716991d7e40fb75a7b66a7805fa7dbbce4420be3955434
+Open your web browser with URL:
+    http://localhost:6080/vnc.html?resize=downscale&autoconnect=1&password=IfM3Io6C
+
+For a better experience, use VNC Viewer (http://realvnc.com/download/viewer)
+to connect to localhost:5950 with password IfM3Io6C
+
+You can also log into the container using the command
+    ssh -X -p 2222 ubuntu@localhost -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no
+with an authorized key in /Users/aaryno/.ssh/authorized_keys.
+Press Ctrl-C to stop the server.
+```
+Additionally, your default browser may open and you will see a blue screen with a black terminal in it. 
 
 ## Getting started with Spyder
 Perform this work in `Spyder`. To access `Spyder` from the `Anaconda prompt`:
