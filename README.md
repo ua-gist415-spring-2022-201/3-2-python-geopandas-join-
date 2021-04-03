@@ -64,7 +64,27 @@ You can also log into the container using the command
 with an authorized key in /Users/aaryno/.ssh/authorized_keys.
 Press Ctrl-C to stop the server.
 ```
-Additionally, your default browser may open and you will see a blue screen with a black terminal in it. 
+Additionally, your default browser may open and you will see a blue screen with a black terminal in it. If your browser does not launch, then follow the instructions in the command output to `Open your web browser with URL:`
+
+When you open the browser you should see something like this:
+![Desktop Image with Task Bar](desktop_task_bar_visible.png)
+
+However, you may see something like this (notice that the grey task bar is missing)
+![Desktop Image without Task Bar](desktop_task_bar_hidden.png)
+
+In this case, the task bar is hidden and you will have to make it visible in order to proceed. It may help if you are on a large monitor.
+
+#### If the grey taskbar is not visible:
+On the left side of the screen you should see a little grey arrow. Click in this to expand a menu for the display. Click on the Gear Icon, then change the `Scaling Mode` to `Local Scaling`:
+
+[!Local Scaling Option](local_scaling.png)
+
+#### Launch Spyder
+Click on the bottom-left corner of the task-bar to bring up a menu and select `Programming` -> `Spyder` to launch spyder.
+
+#### A Note on directories
+This docker container has `mount`ed a host directory as `shared` and you can save files from this virtual desktop to `shared` and have them accessible from your host computer. For example, this is how the `shared` directory looks when I open it from spyder. It has mounted the directory where I checked this assignment out to (the repo directory). This is convenient since you can save your `.py` files to `shared` and then GitHub Desktop will recognize them as new.
+[!Shared Directory](shared_directory.png)
 
 ## Getting started with Spyder
 Perform this work in `Spyder`. To access `Spyder` from the `Anaconda prompt`:
@@ -72,6 +92,8 @@ Perform this work in `Spyder`. To access `Spyder` from the `Anaconda prompt`:
 spyder
 ```
 This will launch the Spyder IDE. 
+
+
  
  ![Spyder IDE](spyder-splash.png)
  
