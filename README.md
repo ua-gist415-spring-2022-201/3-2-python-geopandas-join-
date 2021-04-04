@@ -21,21 +21,21 @@ Docs can be good or bad. The docs for above range from "ok" to "good" (geopandas
 GeoPandas actually uses the `shapely` model for geometries and while it needs to be installed, there is little direct
 interaction with this library on our part except for accessing the `shapely` geometries.
 
-## Objective
+### Objective
 The objective of this lab is to reproduce one of the QGIS Tutorials you did previously:
 - [Performing spatial joins](http://www.qgistutorials.com/en/docs/3/performing_spatial_joins.html)
 
-## Prerequisites
+### Prerequisites
 - Python 3 must be installed [Download](https://www.python.org/downloads/)
 - Docker must be installed
 
-## Deliverables
+### Deliverables
 - `spatial_join.py`
 - `spatial_join.png`
 
-## Directions
+### Directions
 
-### Getting started with Spyder
+#### Getting started with Spyder
 _On doing this without docker: Without docker I would have you install Anaconda, create an environment, install all the libraries, including spyder, and then have you launch `spyder` from the command line. However, the diversity of platform issues we encountered doing it this way previously required standardizing._
 
 Within this repository there is a file [spyder_desktop.py](spyder_desktop.py). We are going to run this file which will do a little extra work to make our docker container run nicely with our windowing environment.
@@ -74,26 +74,20 @@ However, you may see something like this (notice that the grey task bar is missi
 
 In this case, the task bar is hidden and you will have to make it visible in order to proceed. It may help if you are on a large monitor.
 
-#### If the grey taskbar is not visible:
+##### If the grey taskbar is not visible:
 On the left side of the screen you should see a little grey arrow. Click in this to expand a menu for the display. Click on the Gear Icon, then change the `Scaling Mode` to `Local Scaling`:
 
-[!Local Scaling Option](local_scaling.png)
+![Local Scaling Option](local_scaling.png)
 
-#### Launch Spyder
+##### Launch Spyder
 Click on the bottom-left corner of the task-bar to bring up a menu and select `Programming` -> `Spyder` to launch spyder.
 
-#### A Note on directories
+##### A Note on directories
 This docker container has `mount`ed a host directory as `shared` and you can save files from this virtual desktop to `shared` and have them accessible from your host computer. For example, this is how the `shared` directory looks when I open it from spyder. It has mounted the directory where I checked this assignment out to (the repo directory). This is convenient since you can save your `.py` files to `shared` and then GitHub Desktop will recognize them as new.
-[!Shared Directory](shared_directory.png)
+![Shared Directory](shared_directory.png)
 
-## Getting started with Spyder
-Perform this work in `Spyder`. To access `Spyder` from the `Anaconda prompt`:
-```
-spyder
-```
-This will launch the Spyder IDE. 
-
-
+##### Really Getting started with Spyder (for realz this time)
+This is what your Spyder IDE looks like:
  
  ![Spyder IDE](spyder-splash.png)
  
@@ -119,6 +113,8 @@ Review [Performing spatial joins](http://www.qgistutorials.com/en/docs/3/perform
 
 - [NY Boros](http://www.qgistutorials.com/downloads/nybb_19a.zip)
 - [Pavement Ratings](http://www.qgistutorials.com/downloads/V_SSS_SEGMENTRATING_1.zip)
+
+You will want to save them to your repo so that they will be accessible in your `shared` directory but for the sake of unnecessary github commits, don't commit them :-)
 
 Open `Spyder` and create a new document in this repo named `spatial_join.py`.
 
