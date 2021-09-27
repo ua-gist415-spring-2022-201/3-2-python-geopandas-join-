@@ -35,58 +35,24 @@ The objective of this lab is to reproduce one of the QGIS Tutorials you did prev
 
 ### Directions
 
-#### Getting started with Spyder
-_On doing this without docker: Without docker I would have you install Anaconda, create an environment, install all the libraries, including spyder, and then have you launch `spyder` from the command line. However, the diversity of platform issues we encountered doing it this way previously required standardizing._
+#### Install Anaconda and setup a geospatial environment
+Download and install Anaconda [[link](https://www.anaconda.com/products/individual)].
 
-Within this repository there is a file [spyder_desktop.py](spyder_desktop.py). We are going to run this file which will do a little extra work to make our docker container run nicely with our windowing environment.
+Launch Anaconda Navigator.  and select "Environments". We are going to create a new environment for this assignment. 
+Click the "Create" button to create a new environment. Name it "geo-3.7"
+On the right side of Navigator is a list of installed libraries. Change the drop-down from `installed` to `All`, then search for "geopandas".
+If it doesn't show up, make sure that the `All` is selected in the drop-down.
+Click on the open box next to the name of the package to select it for download. Then, at the bottom of the panel, click on the green `Apply` button.
 
-Navigate to the directory where this repo is checked out to and run:
-```
-python spyder_desktop.py -p
-```
-This will run the docker container which will connect to using our browser. You should shortly see something like this:
-```
-Using default tag: latest
-latest: Pulling from aaryno/spyder-geo
-Digest: sha256:0203cd9f45aef9575b75524c102c6f419007e5e905cb808c640370eec5cabd91
-Status: Image is up to date for aaryno/spyder-geo:latest
-docker.io/aaryno/spyder-geo:latest
-Starting up docker image...
-87ddf34197eb49c089716991d7e40fb75a7b66a7805fa7dbbce4420be3955434
-Open your web browser with URL:
-    http://localhost:6080/vnc.html?resize=downscale&autoconnect=1&password=IfM3Io6C
+Do the same for `rasterio` and `rasterstats`. In the end, you will have installed the following libraries:
+- `geopandas`
+- `rasterio`
+- `rasterstats`
 
-For a better experience, use VNC Viewer (http://realvnc.com/download/viewer)
-to connect to localhost:5950 with password IfM3Io6C
+After installing the geospatial libraries in the `geo-3.7` environment, click on the big `Home` button at the top-left of the Navigator window to take you back to Navigator home where the applications are listed. In the drop-down next to `Applications On`, select the `geo-3.7` Environment. Next, find the icon labeled `Spyder` and click `Install`. Once it's installed, the `Install` button will change to a `Launch` button.
 
-You can also log into the container using the command
-    ssh -X -p 2222 ubuntu@localhost -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no
-with an authorized key in /Users/aaryno/.ssh/authorized_keys.
-Press Ctrl-C to stop the server.
-```
-Additionally, your default browser may open and you will see a blue screen with a black terminal in it. If your browser does not launch, then follow the instructions in the command output to `Open your web browser with URL:`
-
-When you open the browser you should see something like this:
-![Desktop Image with Task Bar](desktop_task_bar_visible.png)
-
-However, you may see something like this (notice that the grey task bar is missing)
-![Desktop Image without Task Bar](desktop_task_bar_hidden.png)
-
-In this case, the task bar is hidden and you will have to make it visible in order to proceed. It may help if you are on a large monitor.
-
-##### If the grey taskbar is not visible:
-On the left side of the screen you should see a little grey arrow. Click in this to expand a menu for the display. Click on the Gear Icon, then change the `Scaling Mode` to `Local Scaling`:
-
-![Local Scaling Option](local_scaling.png)
-
-##### Launch Spyder
-Click on the bottom-left corner of the task-bar to bring up a menu and select `Programming` -> `Spyder` to launch spyder.
-
-##### A Note on directories
-This docker container has `mount`ed a host directory as `shared` and you can save files from this virtual desktop to `shared` and have them accessible from your host computer. For example, this is how the `shared` directory looks when I open it from spyder. It has mounted the directory where I checked this assignment out to (the repo directory). This is convenient since you can save your `.py` files to `shared` and then GitHub Desktop will recognize them as new.
-![Shared Directory](shared_directory.png)
-
-##### Really Getting started with Spyder (for realz this time)
+#### Launch Spyder from Anaconda 
+Making sure to have the `geo-3.7` environment selected, launch `Spyder`.
 This is what your Spyder IDE looks like:
  
  ![Spyder IDE](spyder-splash.png)
