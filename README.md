@@ -2,8 +2,15 @@
 ## Assignment
 
 ### Background
-We previously worked with python within the framework of QGIS but python is most flexible when used in stand-alone mode, which allows us to decouple the QGIS framework libraries from the base libraries of python and explicitly add libraries of our own. As with other languages, the power of Python comes from the plethora of high-quality libraries that extend the base functionality of the core python programming language. In the realm of spatial python there are many libraries but we will start with a couple: `geopandas`, `shapely`, `rasterio`, and `rasterstats`. With that said, we will be reliant on specific libraries to be installed for this assignment and to unify the workspaces across all individual student machines (Windows and Macs of various versions with different pre-existing software installed), we will be using a `docker` base image that includes the geospatial libraries we want to use as well as the IDE (Spyder) that we want to use. We'll get to what Spyder is in a bit. 
+We previously worked with python within the framework of QGIS but python is most flexible when used in stand-alone mode, which allows us to decouple the QGIS framework libraries from the base libraries of python and explicitly add libraries of our own. As with other languages, the power of Python comes from the plethora of high-quality libraries that extend the base functionality of the core python programming language. In the realm of spatial python there are many libraries but we will start with a couple: `geopandas`, `shapely`, `rasterio`, and `rasterstats`. 
 
+#### GeoPandas
+Read this [tutorial](https://geopandas.org/getting_started/introduction.html)
+Browse/read the GeoPandas [user guide](https://geopandas.org/docs/user_guide.html). This will be a reference for you in this and later assignments. 
+
+- Tutorial: https://geopandas.org/getting_started/introduction.html
+- User Guide: https://geopandas.org/docs/user_guide.html
+- 
 #### Anaconda
 Python relies on libraries that extend the basic functionality. These libraries are installed and managed primarily by two different methods. `pip` may be more familiar to you if you have used python previously. `conda` is what we will use because it manages dependencies better and the conda library repos (aka `channels`) support the geospatial libraries better than `pip`'s `PyPi`.
 
