@@ -10,14 +10,6 @@ Browse/read the GeoPandas [user guide](https://geopandas.org/docs/user_guide.htm
 
 - Tutorial: https://geopandas.org/getting_started/introduction.html
 - User Guide: https://geopandas.org/docs/user_guide.html
-- 
-#### Anaconda
-Python relies on libraries that extend the basic functionality. These libraries are installed and managed primarily by two different methods. `pip` may be more familiar to you if you have used python previously. `conda` is what we will use because it manages dependencies better and the conda library repos (aka `channels`) support the geospatial libraries better than `pip`'s `PyPi`.
-
-We won't get into the specifics of how to install the packages themselves though you are encouraged to create your own conda install, your own conda environment(s), and install your own libraries. However, for building an application that uses a variety of geospatial packages this is quite challenging because different libraries may depend on the same core geo or math library (which is good) but may also require a different version (which is bad and causes us to fail to install the library). To complicate matters, different versions of libraries may have different dependency versions. To make it even more complex and infurirating, different channels or repos may have libraries that have their own nuanced dependencies. Not to make it even worse, but the order of installation also makes a difference. Therefore, for this class we are going to be using a docker container that already has the right versions of libraries installed that we will need for this assignment. 
-
-#### Integrated Development Environment (IDE) - Spyder
-When developing code or working with structured files in HTML, JSON, YAML, etc., it is helpful to use a special type of text editor that does syntax highlighting as well as more advanced functions such as being able to complete typing commands or variables because they are context-aware as well as have integrations with runtimes. For this class we will be using `Spyder`, an IDE for Python that includes smart editing, integrated runtime, and a variable explorer, allowing you to visually inspect your variables as you are running through your program. Like the geospatial libraries, this is a python library with its own dependencies and I have wrapped it up in the same docker container. Since it is a Graphical User Interface (GUI), it has special requirements for building windows and interacting with your mouse and keyboard that are slightly morecomplicated running through docker so we are going to be running them inside a browser. 
 
 #### Geospatial libraries and notes on documentation 
 Geospatial Library Reference:
@@ -41,43 +33,8 @@ The objective of this lab is to reproduce one of the QGIS Tutorials you did prev
 - `spatial_join.png`
 
 ### Directions
-
-#### Install Anaconda and setup a geospatial environment
-Download and install Anaconda [[link](https://www.anaconda.com/products/individual)].
-
-Launch Anaconda Navigator.  and select "Environments". We are going to create a new environment for this assignment. 
-Click the "Create" button to create a new environment. Name it "geo-3.7"
-On the right side of Navigator is a list of installed libraries. Change the drop-down from `installed` to `All`, then search for "geopandas".
-If it doesn't show up, make sure that the `All` is selected in the drop-down.
-Click on the open box next to the name of the package to select it for download. Then, at the bottom of the panel, click on the green `Apply` button.
-
-Do the same for `rasterio` and `rasterstats`. In the end, you will have installed the following libraries:
-- `geopandas`
-- `rasterio`
-- `rasterstats`
-
-After installing the geospatial libraries in the `geo-3.7` environment, click on the big `Home` button at the top-left of the Navigator window to take you back to Navigator home where the applications are listed. In the drop-down next to `Applications On`, select the `geo-3.7` Environment. Next, find the icon labeled `Spyder` and click `Install`. Once it's installed, the `Install` button will change to a `Launch` button.
-
-#### Launch Spyder from Anaconda 
-Making sure to have the `geo-3.7` environment selected, launch `Spyder`.
-This is what your Spyder IDE looks like:
- 
- ![Spyder IDE](spyder-splash.png)
- 
-Notice the three panels. In the large panel on the left (labeled `Editor`) you can write python code and take notes. In the 
-top right `Variable explorer`) you can see what variables are in scope and inspect their types and contents. In the bottom 
-right ('iPython console') is an interactive python console. You can type python directly into the console or use the icons 
-at the top of the `Editor` panel to send commands to the python console. Of note, the Gear icon in the console title bar
-will allow you to restart the "`kernel`", which restarts python and gives you a fresh environment (with no declared 
-variables or libraries imported).
-
-In practice, it is good to use the `Editor` window to build a working program line by line, saving your progress as a new
-python file, and then, after significant edits, restarting the kernel and running through the program line by line to make 
-sure it works from start to finish.
-
-The editor has a navigation bar that allows you to run a selection, a line, or the entire program:
-
-![Spyder IDE](spyder-editor-navbar.png)
+## Update conda env
+Install the `descartes` library in your `geo37` environment. If you already have Spyder running you will need to restart the kernel for the new library to be usable in that session.
 
 ## Performing spatial joins
 Review [Performing spatial joins](http://www.qgistutorials.com/en/docs/3/performing_spatial_joins.html) to see our objective. 
@@ -86,8 +43,6 @@ Review [Performing spatial joins](http://www.qgistutorials.com/en/docs/3/perform
 
 - [NY Boros](http://www.qgistutorials.com/downloads/nybb_19a.zip)
 - [Pavement Ratings](http://www.qgistutorials.com/downloads/V_SSS_SEGMENTRATING_1.zip)
-
-You will want to save them to your repo so that they will be accessible in your `shared` directory but for the sake of unnecessary github commits, don't commit them :-)
 
 Open `Spyder` and create a new document in this repo named `spatial_join.py`.
 
