@@ -133,4 +133,4 @@ nybb_with_mean_ratings.head()
 
 ### Deliverable
 Save your final python file as `spatial_join.py` in this repository. Additionally, take a screenshot showing the results
-of the final step in Part 1 and save it as `spatial_join.png`.
+of the final step in the assignment and save it as `spatial_join.png`.
