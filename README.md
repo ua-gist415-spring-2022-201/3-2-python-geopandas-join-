@@ -54,7 +54,7 @@ import descartes
 ```
 `geopandas` can read shapefiles. Using the path to the extracted shapefile above:
 ```
-nybb = geopandas.read_file('/Users/username/classes/gist604b/fall-2019-online/data/nybb_19a/nybb.shp')
+nybb = geopandas.read_file('/Users/username/classes/gist415/fall-2019-online/data/nybb_19a/nybb.shp')
 ```
 Next, do some basic exploration of the data and the python structures made from it:
 ```
@@ -68,7 +68,7 @@ nybb.plot()
 ```
 Do the same for the street pavement rating:
 ```
-vss = geopandas.read_file('/Users/username/classes/gist604b/fall-2019-online/data/V_SSS_SEGMENTRATING_1/dot_V_SSS_SEGMENTRATING_1_20190129.shp')
+vss = geopandas.read_file('/Users/username/classes/gist415/fall-2019-online/data/V_SSS_SEGMENTRATING_1/dot_V_SSS_SEGMENTRATING_1_20190129.shp')
 ```
 And explore:
 ```
