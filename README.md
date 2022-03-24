@@ -26,7 +26,6 @@ The objective of this lab is to reproduce one of the QGIS Tutorials you did prev
 
 ### Prerequisites
 - Python 3 must be installed [Download](https://www.python.org/downloads/)
-- Docker must be installed
 
 ### Deliverables
 - `spatial_join.py`
